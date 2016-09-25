@@ -1,7 +1,7 @@
 require 'fileutils'
 require 'thrive/util/data/seed_proxy'
 
-module Thrive::Util::Data::Seeder
+module Track::Util::Data::Seeder
 
   # this is the primary entry point into the Seeder responsible for running all of the seed files in each of the
   # registered GEMs and the host rails application. Unlike the migrator, it is not require to move each file into
@@ -20,7 +20,7 @@ module Thrive::Util::Data::Seeder
     seeds = files.map do |file|
       version, name, scope = file.scan(/([0-9]+)_([_a-z0-9]*)\.?([_a-z0-9]*)?.rb/).first
       name, version = name.camelize, version.to_i
-      Thrive::Util::Data::SeedProxy.new(name, version, file)
+      Track::Util::Data::SeedProxy.new(name, version, file)
     end
 
     # reorder the seeds to ensure they run in the correct order across all gems
@@ -56,4 +56,4 @@ module Thrive::Util::Data::Seeder
     result
   end # def self.process_paths
 
-end # module Thrive::Util::Data::Seeder
+end # module Track::Util::Data::Seeder

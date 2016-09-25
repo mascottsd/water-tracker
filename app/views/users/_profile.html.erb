@@ -9,7 +9,7 @@
       Sex
     </div>
     <%= user_form.hidden_field :user_id, :value => @user.id %>
-    <%= user_form.select(:gender, Thrive::GlobalConstants::GENDERS, {include_blank: true},  class: 'form-control', required: true) %>
+    <%= user_form.select(:gender, Track::GlobalConstants::GENDERS, {include_blank: true},  class: 'form-control', required: true) %>
   </div>
 </div>
 
@@ -19,7 +19,7 @@
     <div class="question">
       Your current age (in years)
     </div>
-    <%= user_form.select(:age_range, Thrive::GlobalConstants::AGE_RANGES, {include_blank: true},  class: 'form-control', required: true) %>
+    <%= user_form.select(:age_range, Track::GlobalConstants::AGE_RANGES, {include_blank: true},  class: 'form-control', required: true) %>
   </div>
 </div>
 
@@ -37,7 +37,7 @@
   <span class="input-group-addon"></span>
   <div class="fg-line">
     <div class="question">Cancer Type (most recent diagnosis if you have had more than one cancer diagnosis).</div>
-    <%= user_form.select(:cancer_type, Thrive::GlobalConstants::CANCER_TYPES, {include_blank: true},  class: 'form-control', required: true) %>
+    <%= user_form.select(:cancer_type, Track::GlobalConstants::CANCER_TYPES, {include_blank: true},  class: 'form-control', required: true) %>
   </div>
 </div>
 
@@ -47,7 +47,7 @@
     <div class="question">
       Time since diagnosis
     </div>
-    <%= user_form.select(:time_since_diagnosis, Thrive::GlobalConstants::DIAGNOSIS_TIMES, {include_blank: true},  class: 'form-control', required: true) %>
+    <%= user_form.select(:time_since_diagnosis, Track::GlobalConstants::DIAGNOSIS_TIMES, {include_blank: true},  class: 'form-control', required: true) %>
   </div>
 </div>
 

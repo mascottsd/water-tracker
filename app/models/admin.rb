@@ -68,6 +68,6 @@ class Admin < ApplicationRecord
     # Helper sets all defaults on the current model prior to validation.
     def set_defaults
         # user_id
-        self.admin_id ||= Thrive::Util::Uuid.generate
+        self.admin_id ||= Track::Util::Uuid.generate
     end # def set_defaults
 end

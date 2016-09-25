@@ -1,8 +1,8 @@
-class Thrive::Util::Data::SeedProxy < $SeedProxyStruct ||= Struct.new(:name, :version, :filename)
+class Track::Util::Data::SeedProxy < $SeedProxyStruct ||= Struct.new(:name, :version, :filename)
 
   def initialize(name, version, filename)
     super
     @migration = nil
   end
 
-end # class Thrive::Util::Data::SeedProxy
+end # class Track::Util::Data::SeedProxy

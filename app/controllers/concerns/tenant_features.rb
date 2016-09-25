@@ -2,7 +2,7 @@ module TenantFeatures
   extend ActiveSupport::Concern
 
   included do
-    before_filter :identify_tenant
+    before_action :identify_tenant
 
     cattr_accessor :skip_tenancy
     cattr_accessor :model_type
@@ -17,7 +17,7 @@ module TenantFeatures
     target_subdomain = subdomains.shift
 
 
-    if request.domain == Thrive::GlobalConstants::BASE_DOMAIN
+    if request.domain == Track::GlobalConstants::BASE_DOMAIN
       @current_tenant = Tenant.where(subdomain: target_subdomain).first
     elsif request.host.include?("localhost")
       @current_tenant = Tenant.where(subdomain: "app").first
@@ -31,7 +31,7 @@ module TenantFeatures
       Tenant.current_port = request.port
       Thread.current[:port] = request.port
     else
-      redirect_to "http://#{Thrive::GlobalConstants::BASE_TENANT}.#{Thrive::GlobalConstants::BASE_DOMAIN}:#{request.port}"
+      redirect_to "http://#{Track::GlobalConstants::BASE_TENANT}.#{Track::GlobalConstants::BASE_DOMAIN}:#{request.port}"
     end
 
 

@@ -1,6 +1,6 @@
 require 'uuidtools'
 
-class Thrive::Util::Uuid
+class Track::Util::Uuid
 
   # Simple UUID generator that will return 1 or many identifiers. If more than
   # a single identifier is required, pass the quantity needed.
@@ -9,4 +9,4 @@ class Thrive::Util::Uuid
     qty == 1 ? result.first : result
   end # def self.generate
 
-end # class Thrive::Util::Crypto
+end # class Track::Util::Crypto

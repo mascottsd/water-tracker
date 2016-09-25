@@ -2,7 +2,7 @@ module AdminFeatures
   extend ActiveSupport::Concern
 
   included do
-    before_filter :redirect_tenant
+    before_action :redirect_tenant
   end
 
   # Helper determines if the current tenant is setup appropriately. Only
@@ -13,9 +13,9 @@ module AdminFeatures
     subdomains = request.subdomains.dup
     target_subdomain = subdomains.shift
 
-    subdomains.unshift(Thrive::GlobalConstants::BASE_TENANT)
+    subdomains.unshift(Track::GlobalConstants::BASE_TENANT)
 
-    redirect_to "http://#{subdomains.join('.')}.#{Thrive::GlobalConstants::BASE_DOMAIN}#{request.port == 80 ? '' : ':' + request.port.to_s}#{request.path}" unless Thrive::GlobalConstants::BASE_TENANT == target_subdomain
+    redirect_to "http://#{subdomains.join('.')}.#{Track::GlobalConstants::BASE_DOMAIN}#{request.port == 80 ? '' : ':' + request.port.to_s}#{request.path}" unless Track::GlobalConstants::BASE_TENANT == target_subdomain
   end # def identify_tenant
 
 end # module AdminFeatures

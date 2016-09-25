@@ -26,9 +26,6 @@
   <ul class="main-menu">
     <li><%= link_to("<i class='zmdi zmdi-view-dashboard'></i> Dashboard".html_safe, admins_dashboard_path) %></li>
     <li><%= link_to("<i class='zmdi zmdi-accounts-alt'></i> Trackers".html_safe, admins_thrivers_path) %></li>
-    <li><%= link_to("<i class='zmdi zmdi-format-list-bulleted'></i> Action Steps".html_safe, admins_action_steps_path) %></li>
-    <li><%= link_to("<i class='fa fa-question'></i> Questions".html_safe, admins_questions_path) %></li>
-    <li><%= link_to("<i class='fa fa-filter'></i> Filters".html_safe, admins_filters_path) %></li>
     <li><%= link_to("<i class='zmdi zmdi-account-o'></i> System Administrators".html_safe, admins_path) %></li>
     <li><%= link_to("<i class='fa fa-building-o'></i> Tenants".html_safe, admins_tenants_path) %></li>
     <% if current_admin.email.end_with? 'buildit.io' %>

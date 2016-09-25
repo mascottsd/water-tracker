@@ -3,7 +3,7 @@
 <p>*The information on this page can only be changed when you retake the survey.<p>
 <br>
 
-<% Thrive::GlobalConstants::STRATEGIES.each do |strategy| %>
+<% Track::GlobalConstants::STRATEGIES.each do |strategy| %>
 <h2> <%= strategy %> </h2>
 <%= render partial: 'surveys/likert', locals: { strategy: strategy.downcase, section: 'strength', disabled: true } %>
 <% end %>

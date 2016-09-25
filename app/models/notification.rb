@@ -37,7 +37,7 @@ class Notification < ApplicationRecord
 
   # Helper sets all defaults on the current model prior to validation.
   def set_defaults
-    self.notification_id ||= Thrive::Util::Uuid.generate
+    self.notification_id ||= Track::Util::Uuid.generate
     self.state = 'new' unless state
   end # def set_defaults
 

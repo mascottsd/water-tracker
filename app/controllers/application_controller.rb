@@ -58,7 +58,7 @@ class ApplicationController < ActionController::Base
     query = build_query(model, options[:where])
     total = query.count
     results =  limit == '-1' ? query : query.page(page).per(limit).all.to_a
-    Thrive::Util::Bootgrid.format_response(results, page.to_i, total )
+    Track::Util::Bootgrid.format_response(results, page.to_i, total )
   end # def process_search
 
   # The query will be dynamically established based on the parameters supplied

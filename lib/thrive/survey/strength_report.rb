@@ -11,7 +11,7 @@ class StrengthReport
     # if no response, just return an empty array so we don't actually graph anything
     return [] unless response
 
-    Thrive::GlobalConstants::STRATEGIES.map do |strategy|
+    Track::GlobalConstants::STRATEGIES.map do |strategy|
       {
         name: strategy,
         value: value_for(strategy.downcase)

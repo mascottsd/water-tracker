@@ -1,4 +1,4 @@
-class Thrive::Util::Bootgrid
+class Track::Util::Bootgrid
 
   def self.format_response(array, page, total)
 
@@ -8,4 +8,4 @@ class Thrive::Util::Bootgrid
 
   end
 
-end # class Thrive::Util::Bootgrid
+end # class Track::Util::Bootgrid

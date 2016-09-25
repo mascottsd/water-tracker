@@ -84,7 +84,7 @@ GEM
       countries (~> 1.2.0)
       sort_alphabetical (~> 1.0)
     currencies (0.4.2)
-    d3-rails (4.2.4)
+    d3-rails (4.2.5)
       railties (>= 3.1)
     debug_inspector (0.0.2)
     devise (4.2.0)
@@ -95,6 +95,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (1.6.6)
+      i18n (~> 0.5)
     ffi (1.9.14)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -199,6 +201,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    seed_dump (3.2.4)
+      activerecord (>= 4)
+      activesupport (>= 4)
     slop (3.6.0)
     sort_alphabetical (1.0.2)
       unicode_utils (>= 1.2.2)
@@ -252,6 +257,7 @@ DEPENDENCIES
   country_select
   d3-rails
   devise
+  faker
   jbuilder (~> 2.5)
   jquery-rails
   kaminari
@@ -266,6 +272,7 @@ DEPENDENCIES
   rails (~> 5.0.0, >= 5.0.0.1)
   sass-rails
   sdoc (~> 0.4.0)
+  seed_dump
   spring
   spring-watcher-listen (~> 2.0.0)
   sprockets-rails

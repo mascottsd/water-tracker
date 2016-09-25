@@ -1,5 +1,5 @@
 if defined?(ActionMailer)
-  class Thrive::Mailer < Devise::Mailer
+  class Track::Mailer < Devise::Mailer
     include Devise::Mailers::Helpers
 
     helper :application

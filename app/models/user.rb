@@ -123,12 +123,12 @@ class User < ApplicationRecord
 
     def deactivate
       update_attribute 'state', 'deactivated'
-      Thrive::Deactivate.send_it(self)
+      Track::Deactivate.send_it(self)
     end
 
     def activate
       update_attribute 'state', 'active'
-      Thrive::Reactivate.send_it(self)
+      Track::Reactivate.send_it(self)
     end
 
     # def active_for_authentication?
@@ -141,7 +141,7 @@ class User < ApplicationRecord
     # Helper sets all defaults on the current model prior to VALIDATIONS
     def set_defaults
 #      self.state ||= 'active'
-      self.user_id ||= Thrive::Util::Uuid.generate
+      self.user_id ||= Track::Util::Uuid.generate
       self.subdomain ||= (Tenant.current ? Tenant.current.subdomain :  Tenant.default_tenant.subdomain)
     end # def set_defaults
 

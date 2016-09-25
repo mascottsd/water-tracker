@@ -102,5 +102,14 @@ class Tenant < ApplicationRecord
     # Helper sets all defaults on the current model prior to validation.
     def set_defaults
       self.subdomain ||= "app"
+
+      # Default Appearance to those of the Default Tenant
+      default_tenant = Tenant.default_tenant
+      if default_tenant
+	      self.logo = default_tenant.logo if self.logo.file.nil?
+	      self.desktop = default_tenant.desktop if self.desktop.file.nil?
+	      self.login = default_tenant.login if self.login.file.nil?
+	      self.favicon = default_tenant.favicon if self.favicon.file.nil?
+	    end
     end # def set_defaults
 end # class Tenant

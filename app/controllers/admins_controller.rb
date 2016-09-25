@@ -1,6 +1,6 @@
 class AdminsController < AdminController
 
-  before_filter :set_admin, only: [:reset_password]
+  before_action :set_admin, only: [:reset_password]
 
     # GET /admins
     # GET /admins.json

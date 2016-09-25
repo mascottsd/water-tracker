@@ -16,7 +16,7 @@ Devise.setup do |config|
 
 
   # Configure the class responsible to send e-mails.
-  config.mailer = 'Thrive::Mailer'
+  config.mailer = 'Track::Mailer'
 
 
   # Configure the parent class responsible to send e-mails.

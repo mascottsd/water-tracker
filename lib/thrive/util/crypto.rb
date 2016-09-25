@@ -1,6 +1,6 @@
 # A helper utility for encrypting and decypting strings. Leverages the
 # secret key as the crypto key
-class Thrive::Util::Crypto
+class Track::Util::Crypto
 
   def self.cipher mode, key, data
     cipher = OpenSSL::Cipher::Cipher.new('bf-cbc').send(mode)
@@ -14,4 +14,4 @@ class Thrive::Util::Crypto
     Base64.encode64(encrypted).encode('utf-8')
   end # def self.encrypt
 
-end # class Thrive::Util::Crypto
+end # class Track::Util::Crypto

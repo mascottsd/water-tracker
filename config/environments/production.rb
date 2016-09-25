@@ -23,7 +23,7 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { :host => Thrive::GlobalConstants::BASE_DOMAIN }
+  config.action_mailer.default_url_options = { :host => Track::GlobalConstants::BASE_DOMAIN }
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.

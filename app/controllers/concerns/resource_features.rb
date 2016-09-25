@@ -5,7 +5,7 @@ module ResourceFeatures
 
     # Attempt to fetch the instance of the resource for each action that refers
     # to a single instance.
-    before_filter :fetch_instance, only: [:edit, :update, :show, :destroy]
+    before_action :fetch_instance, only: [:edit, :update, :show, :destroy]
 
   end
 

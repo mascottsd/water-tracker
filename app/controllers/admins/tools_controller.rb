@@ -9,7 +9,7 @@ class Admins::ToolsController < AdminController
 
   def index
     @users = User.where tenant: Tenant.current
-#    @survey = current_user.current_survey
+    @survey = current_user.current_survey
   end # def index
 
   private

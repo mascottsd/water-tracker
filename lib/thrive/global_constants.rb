@@ -1,4 +1,4 @@
-module Thrive::GlobalConstants
+module Track::GlobalConstants
 
   BASE_DOMAIN = "watertracker.io"  # ENV["BASE_DOMAIN"] || (Rails.env == 'development' ? "watertracker.io" : "youritrackwater.com")
 
